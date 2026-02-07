@@ -2,6 +2,7 @@ from Moniter_battery import MoniterBattery
 from clip import cliclass
 def main():
     moniter = MoniterBattery()
-    clii = cliclass.cli()
+    moniter.cli_header()        # Show header
+    cliclass.cli(moniter)
 if __name__ == "__main__":
     main()

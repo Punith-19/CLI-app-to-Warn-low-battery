@@ -1,8 +1,10 @@
 import sys
 from Moniter_battery import MoniterBattery;
 class cliclass:
-    MoniterBattery().cli_header()
-    def cli():
+    @staticmethod
+    
+    def cli(moniter):
+        moniter.cli_menu()
         while(True):
             try:
                 command = input("\n BMcli> ").strip().lower()
