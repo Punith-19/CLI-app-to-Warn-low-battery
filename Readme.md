@@ -11,7 +11,7 @@ A simple Windows CLI application that monitors your battery level and alerts you
 - **Start/Stop Control**: Toggle monitoring on and off as needed
 - **Status Display**: View current monitoring status and threshold
 
-## 🔧 Installation
+## Installation
 
 ### Step 1: Clone the Repository
 ```bash
@@ -45,17 +45,16 @@ pip install -r requirements.txt
 **What gets installed:**
 - `psutil` - For reading battery information
 
-**Note:** `threading` is a built-in Python library and doesn't need installation.
-
 **Alternative (manual installation):**
 ```bash
 pip install psutil
 ```
 
-## ▶️ How to Run
+## How to Run
 
 ### Method 1: Using Batch File (Easiest)
 Simply double-click `run.bat`
+Note: when bat file is runned it will run in ven ie "myenv"
 
 ### Method 2: Using Command Prompt
 1. Open Command Prompt in the project folder
@@ -72,6 +71,7 @@ battery-alert-monitor/
 ├── Moniter_battery.py   # Battery monitoring logic
 ├── clip.py              # CLI interface
 ├── run.bat              # Batch file for easy execution
+├── warning_gui.py       # gui for warning
 ├── requirements.txt     # Python dependencies
 ├── myenv/               # Virtual environment (not in git)
 └── README.md            # This file
@@ -87,8 +87,5 @@ battery-alert-monitor/
 ## Work in Progress
 
 This is a personal-use application currently under development. Upcoming features:
-- [ ] GUI alert popup (center-screen notification)
-- [ ] Sound alerts
 - [ ] Settings persistence (save threshold between sessions)
-- [ ] System tray integration
 - [ ] Auto-start with Windows
