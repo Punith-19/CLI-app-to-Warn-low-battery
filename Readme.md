@@ -15,7 +15,7 @@ A simple Windows CLI application that monitors your battery level and alerts you
 
 ### Step 1: Clone the Repository
 ```bash
-git clone <your-repo-url>
+git clone git@github.com:Punith-19/CLI-app-to-Warn-low-battery.git
 cd battery-alert-monitor
 ```
 
