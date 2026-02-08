@@ -32,12 +32,11 @@ On Windows Command Prompt:
 ```bash
 myenv\Scripts\activate
 ```
-```
+
 
 ### Step 3: Install Required Libraries
 
-With the virtual environment activated, install all dependencies:
-
+**With the virtual environment activated, install all dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
