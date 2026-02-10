@@ -1,12 +1,16 @@
 import time
 import psutil
 import threading
+import configparser
 from warning_gui import warning
 class MoniterBattery:
+ 
     def __init__(self):
-        self.running = True
+        config = configparser.ConfigParser()
+        config.read('config.ini')
+        self.running = False
         self.thread = None
-        self.threshold = 30
+        self.threshold = config.get('General', 'th')
 
     def Battery_check_loop(self):
         # Intervel to read percentage
@@ -56,8 +60,13 @@ class MoniterBattery:
         print("="*50)
 
     def set_threshold(self):
+        config = configparser.ConfigParser()
         print("\tenter a new threshold value in '%' from 1 to 100")
-        self.threshold = int(input())
+        a = int(input())
+        config['General'] = {'th' : a}
+        with open('config.ini', 'w') as configfile:
+            config.write(configfile)
+        self.threshold = a
         print(f"\tthreshold changed to {self.threshold}")
 
     def cli_menu(self):

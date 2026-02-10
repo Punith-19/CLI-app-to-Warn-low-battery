@@ -62,6 +62,12 @@ Simply double-click `run.bat`
 python Main.py
 ```
 
+### Setup auto start (Batch file needed)
+1. Create a short cut for the batch file by left clicking in .bat file.
+2. Now click "win+R" and type following command there "shell:startup".
+3. File explorer opens in a certain directory paste your .bat file short cut there.
+4. Now the script runs on start up, to terminate you can use task manager or "exit" command in CLI.
+
 ## Project Structure
 
 ```
@@ -72,19 +78,14 @@ battery-alert-monitor/
 ├── run.bat              # Batch file for easy execution
 ├── warning_gui.py       # gui for warning
 ├── requirements.txt     # Python dependencies
+├── config.ini           # Config file to save threshold
 ├── myenv/               # Virtual environment (not in git)
 └── README.md            # This file
 ```
 
 ## How It Works
 
-1. The program runs in the background using Python threading
+1. The program runs in the background on start up 
 2. Every 50 seconds, it checks your battery percentage
 3. If battery is below threshold AND not plugged in, it displays a warning
 4. The CLI remains responsive for you to control the monitoring
-
-## Work in Progress
-
-This is a personal-use application currently under development. Upcoming features:
-- [ ] Settings persistence (save threshold between sessions)
-- [ ] Auto-start with Windows
