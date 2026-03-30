@@ -16,5 +16,5 @@ class warning:
         icon_image = tk.PhotoImage(file="icon.png")
         root.withdraw()
         root.attributes('-topmost', True)
-        messagebox.showwarning("Warning", "Low Battery")
+        messagebox.showwarning("Warning", f"Low Battery {percent}%")
         root.mainloop()
